@@ -1,0 +1,24 @@
+
+Commands para terminal:
+dir -> Sirve para ver el directorio por dentro, sus carpetas y archivos
+cd [folder] -> comando para cambiar de directorio change directory separado va la ruta del archivo.
+cd .. -> sirve para volver un directorio atras.
+cls -> limpia la terminal
+
+Bash
+ls => dir -> Sirve para ver el directorio por dentro, sus carpetas y archivos.
+cd == cd -> Comando para cambiar de directorio change directory separado va la ruta del archivo.
+clear => cls -> limpia la terminal
+
+--------
+GIT: Github, Bitbucket, Gitlab.
+Commands:
+--------
+git clone [URL DEL REPO]
+git status (Se fija el estado del repo y que archivos fueron modificados)
+git add [folder/file] (Agrega separado del add los archivos o carpetas que le especifiques al stage)
+git add . (Agrega todos los archivos al stage, los archivos proximos a commitear) 
+git commit -m "Mi primer commit" (Sirve para hacer commit)
+git push (Pusheamos o empujamos nuestros archivos al repo)
+git pull (Refrescar el repositorio y traer todo lo nuevo)
+
