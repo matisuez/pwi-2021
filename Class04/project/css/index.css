@@ -1,0 +1,64 @@
+body {
+    background: darkslategray;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+h1, h2  {
+    color: olive;
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+.fondo {
+    background: black;
+}
+
+.alineacion-texto {
+    font-family: Arial, Helvetica;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.section-one {
+    margin: 22px 50px 10px 35px;
+    width: 50%;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 15px solid #ccc;
+}
+
+#contact {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+#contact > p > span {
+    color: blue;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+}
