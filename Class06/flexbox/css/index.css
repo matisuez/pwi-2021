@@ -1,0 +1,13 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+}
+
+section {
+    border: 1px dashed black;
+    padding: 30px;
+    background: yellow;
+}
