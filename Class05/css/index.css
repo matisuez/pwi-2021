@@ -1,0 +1,70 @@
+
+
+/*
+    Cambiamos el comportamiento de los links
+*/
+header > nav > ul > li > a:link {
+    text-decoration: none;
+}
+
+header > nav > ul > li > a:visited {
+    color: violet;
+}
+
+header > nav > ul > li > a:hover {
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+
+header > nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-item > a {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: yellow;
+}
+
+section:hover {
+    background: black;
+    color: white;
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div > marquee {
+    
+}
+
+section {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding: 10px;
+    border: 20px solid yellowgreen;
+    border-radius: 20px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+mark {
+    background: yellow;
+}
+
