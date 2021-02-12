@@ -33,7 +33,8 @@
             <div class="container mt-4">
                 <div class="row justify-content-center">
                     <div class="col-md-12 col-sm-12">
-                        <h1>Class 08</h1>
+                        <h1 id="titulo-home">Class 08 - Hola, </h1>
+                        <h1 class="titulo"></h1>
                     </div>
                 </div>
             </div>
@@ -55,7 +56,94 @@
             
         </footer>
         <script>
-            alert('Javascript trabajando!');
+            
+            // Acceder al DOM
+            document.getElementById('titulo-home').innerHTML = 'Clase 08 - Hola ';
+            document.getElementsByClassName('titulo')[0].innerHTML = 'Titulo';
+            document.querySelectorAll('h2')[0].innerHTML = "Mis titulos en h2";
+            document.querySelectorAll('h2')[1].innerHTML = "Mis titulos en h2";
+
+            console.log('Tipos de datos:');
+            // Tipos de datos
+            // Dentro variables, constantes
+            /*
+            */
+            // Booleanos
+            console.log('- Booleanos');
+            var boolFalse = false;
+            var boolTrue = true;
+            console.log(boolTrue);
+
+            // String
+            console.log('- Strings');
+            var varString = 'aasdasdasdasgssfkl;lk./1231231231% asdasdasda asdasdasdasd'; // string => cadena de caracteres
+            console.log(varString);
+
+            // Numbers
+            console.log('- Numbers');
+            var varNumber = 1.2; // Number => numeros
+            console.log(varNumber);
+
+            // Objetos de javascript
+            console.log('- Objeto javascript');
+            var varObject = {
+                prop1: 'hola',
+                prop2: 'Chau'
+            }
+            console.log(varObject);
+            var persona = {
+                name: 'Matias',
+                surname: 'Suez',
+                age: 25
+            }
+            console.log(persona.name + ' ' + persona.surname + " " + persona.age);
+            document.getElementById('titulo-home').innerHTML += `${persona.name} ${persona.surname}!`;
+
+            // JSON
+            console.log('- JSON');
+            var objectJson = {
+                "name": 'Matias',
+                "surname": 'Suez',
+                "age": 25
+            }
+            console.log(objectJson);
+            console.log(objectJson.name);
+            
+            // Array = Arreglo => Coleccion
+            var coleccionNumeros = [1, 2, 3, 4, 5];
+            var coleccionStrings = ['Hola', 'como te va?', 'Chau'];
+            var coleccionNumerosYStrings = [ 1, 'Hola', 'chau', 100, 25.45423232 ];
+            var colecObjetos = [
+                { name: 'Matias', surname: 'Suez', age: 25 },
+                { name: 'Seba', surname: 'R', age: 25, status: true }
+            ];
+            console.log(coleccionStrings[1]);
+
+            // Ejemplos de objetos
+            var auto1 = {
+                marca: 'Ford',
+                modelo: 'Mustang',
+                motor: 4.0,
+                encendido: false,
+                velocidad: 10,
+            }
+
+            console.log('Esta encendido ' + auto1.encendido);
+            auto1.encendido = true;
+            alert('Queres encender el auto?');
+            console.log('Esta encendido ' + auto1.encendido);
+            
+            var borges = {                
+                author: 'Jorge Luis Borges',
+                editorial: 'Planeta',
+                libros: [
+                    "",
+                    { titulo: 'Otro libro' }
+                ]
+            }
+
+            console.log(`${borges.author}, editorial: ${borges.editorial}, el primer libro es ${borges.libros[0].titulo}`);
+
         </script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
