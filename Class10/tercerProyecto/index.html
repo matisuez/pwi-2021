@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="saludar()">Saludar</button>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <form onsubmit="getInputs(event)">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <input type="number" id="edad" name="edad" placeholder="Edad">
+        <input type="submit" value="Enviar formulario">
+    </form>
+    <button type="button" onclick="getInputsByButton()">Obtener datos del formulario</button>
+    <hr>
+    <form onsubmit="login(event)">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <input type="submit" value="Inicia sesion">
+    </form>
+    <script src="js/index.js"></script>
+</body>
+</html>
