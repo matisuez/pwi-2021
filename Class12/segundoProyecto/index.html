@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <select id="selector" onchange="getSelector(event)">
+            <option selected="selected">Seleccione una comida</option>
+            <option value="1">Milanesa</option>
+            <option value="2">Papas fritas</option>
+            <option value="3">Cheesecake</option>
+        </select>
+        <input type="text" onkeyup="getValue(event)">
+        <table id="personasTable">
+            <tr>
+                <th>Nombre</th>
+            </tr>
+            
+        </table>
+        <div id="message">
+        </div>
+        <button id="botonDeAlerta">Alert</button>
+        <div style="padding: 20px; background: red;" id="divClick">
+            Lorem ipsum dolor sit amet.
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+</html>
