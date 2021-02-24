@@ -127,3 +127,4 @@ testing.innerHTML = `
     <br>
     Resultado total: $ ${result}
 `;
+
