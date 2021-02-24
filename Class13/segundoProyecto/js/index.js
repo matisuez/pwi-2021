@@ -60,9 +60,10 @@ function showTable () {
 
 inputSearch.addEventListener('keyup', (e) => {
     const name = e.target.value;
-    console.log(name);
+    
     
     if(name != '') {
+        console.log(name);
         users = users.filter( u => u.name.toLowerCase().includes(name));
         showTable();
     } else {
