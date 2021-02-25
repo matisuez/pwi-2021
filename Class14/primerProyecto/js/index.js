@@ -1,15 +1,18 @@
 
 const charactersCards = document.querySelector('#charactersCards');
 const viewSingle = document.querySelector('#viewSingle');
+const searchCharacter = document.querySelector('#searchCharacter');
 let characters;
 // fetch('url').then( response => response).then().catch();
 
 const getCharacters = async() => {
     try {
-        
+        // var url = button.value;
+        // var param = 'character';
+        // fetch(`${url}/${character}`);
         const response = await fetch('https://www.breakingbadapi.com/api/characters');
         const result = await response.json(); // [ {personaje1}, {per2}, {per3} ];
-
+        
         return result;
         
     } catch (error) {
@@ -60,21 +63,40 @@ function deleteChar(id) {
 }
 
 function getChar(id) {
-    const character = characters.find( char => char.char_id == id);
-    
+
+    const character = characters.find( char => char.char_id == id); // find return {}
     viewSingle.innerHTML = `
-    <div class="col-md-12 col-sm-12">
-        <div class="card" style="width: 18rem;">
-            <img src="${character.img}" class="card-img-top" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">${character.id}. ${character.name}</h5>
-            <p class="card-text">${character.nickname}</p>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                <img src="${character.img}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">${character.char_id}. ${character.name}</h5>
+                    <p class="card-text">${character.nickname}</p>
+                </div>
+                </div>
             </div>
         </div>
-    </div>
     `;
 
 }
+
+searchCharacter.addEventListener('keyup', async(e) => {
+    // Guardamos el value del target del evento del input
+    const searchValue = e.target.value; // HEISENBERG = H.. h, HE ... he, hei ...
+    console.log(searchValue);
+    // Asignamos nuevamente al array characters el resultado de la condicion especificada en filter.
+    // La condicion evalua pasando todo a minuscula que el obj char incluya el value del input (searchValue) 
+    characters = characters.filter( char => 
+        char.nickname.toLowerCase().includes(searchValue.toLowerCase()) 
+        || 
+        char.name.toLowerCase().includes(searchValue.toLowerCase())); // find {}, filter []
+            
+    createCards();
+    characters = await getCharacters(); // Promise {<Pending..>}
+});
 
 fillCharacters();
 
