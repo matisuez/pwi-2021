@@ -24,3 +24,4 @@ setTimeout( () => {
 }, 3000);
 console.log(divTwoFirst);
 console.log(divTwoArray);
+Date.now();
