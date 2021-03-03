@@ -1,0 +1,12 @@
+
+Comandos de MongoDB basicos para un CRUD ( Create, Read, Update, Delete ):
+
+- show dbs; ( Muestra todas las bases de datos )
+- use db_name; ( Switchea o se para dentro de esa base )
+- db.db_name.insertOne({ name: "Matias", age: 25, status: true }); ( Es una funcion que recibe un objeto de javascript y lo inserta en la base );
+- db.db_name.find(); ( Devuelve todos los objetos encontrados )
+- db.db_name.find().toArray(); ( Devuelve todos los objetos encontrados dentro de un array )
+- db.db_name.find({ name: "Matias", status: true }); ( Devuelve los objetos encontrados, matcheando segun el objeto que le pasemos dentro de los parentesis )
+- db.db_name.update({ name: "Pepe" }, { name: "Pepito", surname: "Otro" }); ( Recibe como primer parametro las propiedades a buscar para un objeto y como segundo parametro el objeto nuevo modificado )
+- de.db_name.deleteOne({ name: "Pepito" }); ( Recibe las propiedades del objeto a eliminar )
+- db.db_name.drop(); ( Elimina una coleccion )
