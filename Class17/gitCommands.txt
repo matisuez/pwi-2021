@@ -1,0 +1,45 @@
+
+Comandos de GIT:
+2 Formas:
+    - Local
+    - Remota ( Publicos o Privados )
+        - GitHub
+        - Bitbucket
+        - GitLab
+
+- cd folder_name ( Viajo al directorio que llame )
+- cd .. (Vuelvo un directorio atras)
+- exit ( Cierra la consola )
+
+Windows / Linux
+- dir vs ls
+- cls vs clear
+- mkdir
+
+GIT (Local):
+- git config --global user.name "Matias Suez"
+- git config --global user.email "matisuez@gmail.com"
+- git init ( Inicia y empieza a escuchar git lo que pasa dentro de la carpeta )
+- git status ( Sirve para ver el estado del repo )
+- git rm --cached file_name ( Sirve para volver a los archivos untracked )
+- git restore --staged file_name ( Sirve para volver a los archivos untracked )
+- git restore file_name ( Vuelve un archivo del untracked al working directory )
+- git checkout file_name ( Vuelve un archivo del untracked al working directory )
+- git add file_name
+- git add . ( El git add anade los archivos al staging area )
+- git commit -m "Agregamos el index.html y creamos la carpeta models con el index.js"
+- git log ( Muestra todos los commits )
+- git log --oneline ( Muestra los commits en una linea )
+- git reset --soft id_commit ( Elimina el comit segun el id al cual queremos volver, lo elimina y vuelve los archivos del comit eliminado al staging area )
+- git reset --hard id_commit ( Elimina el comit segun el id al cual queremos volver, lo elimina y vuelve al working area )
+- git branch ( Muestra todas ramas de mi repo )
+- git branch branch_name ( Crea una nueva rama )
+- git checkout -b branch_name ( Crea una rama y nos posiciona encima )
+- git checkout branch_name ( Cambia a la rama seleccionada )
+
+GIT (Remoto):
+- git remote add origin url_repo ( Conectamos el repo local al remoto )
+- git remote -v
+
+
+
