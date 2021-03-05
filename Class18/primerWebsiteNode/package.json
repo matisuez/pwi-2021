@@ -1,0 +1,14 @@
+{
+  "name": "primerwebsitenode",
+  "version": "1.0.0",
+  "description": "Primer proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matias Suez",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

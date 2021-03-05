@@ -1,0 +1,13 @@
+
+Comandos Node:
+- npm init ( Crea un proyecto de node (package.json) por default )
+- npm init -y ( Crea un proyecto de node con package.json personalizado )
+- npm -v ( Nos muestra la version de NPM que tenemos instalada )
+- node -v ( Nos muestra la version de NODE que tenemos instalada )
+- node index.js ( Arranca el proyecto o el archivo de node (JS) que queremos ejecutar )
+- npm install -g nodemon ( Sirve para estar escuchando todo el tiempo los cambios en el archivo ejecutado )
+- npm i -g express ( Instala el framework que utilizamos para crear rutas y el proyecto  de forma global )
+- express project_name ( Crea un proyecto de express en el directorio donde estemos parados )
+- express project_name --view=hbs ( Crea un proyecto especificando el motor de vistas ( hbs => handlerbars, jade, pug, etc ) )
+
+
