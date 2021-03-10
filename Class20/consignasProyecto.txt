@@ -1,0 +1,7 @@
+
+Consignas:
+- Conexion base de datos: CRUD (por lo menos dos sentencias) (MySQL/MongoDB)
+- Envio de emails (Nodemailer)
+- SPA
+- Bootstrap
+- Estilos personalizados (opcional)

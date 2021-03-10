@@ -1,0 +1,10 @@
+
+commands:
+- npm i -g nodemon
+- npm i -g express-generator
+- express project_name --view=hbs
+- cd project_name
+- npm i
+- npm i express-handlebars
+
+
