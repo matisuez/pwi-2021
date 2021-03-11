@@ -1,0 +1,5 @@
+Commands:
+- npm i express-handlebars
+- npm i dotenv
+- npm i mysql
+- npm i util
