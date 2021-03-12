@@ -5,7 +5,7 @@ const {
     DB_T_ROLES
 } = process.env;
 
-const getAllUsers = async(table_name) => {
+const getAllUsers = async() => {
     try {
 
         const query = `
@@ -64,19 +64,61 @@ const getSingleUser = async(id) => {
     try {
         const query = `
             SELECT
-                id_user,
-                email,
-                password,
-                role
+                U.id_user,
+                U.email,
+                U.password,
+                R.id_role,
+                R.detail
             FROM
+                ${DB_T_USERS} as U
+                INNER JOIN ${DB_T_ROLES} as R
+                ON U.role = R.id_role
+            WHERE
+                U.id_user = ?
+                AND
+                U.available = 1
+        `;
+
+        return await pool.query(query, [id])
+
+    } catch (error) {
+        throw error;
+    }
+}
+
+const deleteUser = async(id) => {
+    try {
+        const query = `
+            UPDATE
                 ${DB_T_USERS}
+            SET
+                available = 0
             WHERE
                 id_user = ?
                 AND
                 available = 1
         `;
 
-        return await pool.query(query, [id])
+        const result = await pool.query(query, [id]);
+
+        return result.affectedRows;
+
+    } catch (error) {
+        throw error;
+    }
+}
+
+const updateUser = async (id, obj) => {
+    try {
+        
+        const query = `
+            UPDATE
+                ${DB_T_USERS}
+            SET email = ?, password = ?, role = ?
+            WHERE id_user = ? AND available = 1
+        `;
+
+        return await pool.query(query, [obj.email, obj.password, obj.role, id]);
 
     } catch (error) {
         throw error;
@@ -87,6 +129,8 @@ module.exports = {
     getAllUsers,
     getRoles,
     insertUser,
-    getSingleUser
+    getSingleUser,
+    deleteUser,
+    updateUser
 }
 
