@@ -1,0 +1,6 @@
+
+Start-up:
+- GIT Repository
+- HBS => SPA y MVC (Model, View, Controller) + Utils
+- Contact form: Nodemailer
+- Consultas: MySQL / Knex

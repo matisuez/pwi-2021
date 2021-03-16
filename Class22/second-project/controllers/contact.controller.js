@@ -8,10 +8,13 @@ const sendComment = async(req, res, next) => {
         const { fullName, email, comment } = req.body;
         const emailToSend = { fullName, email, comment };
 
-        const info = await mailer.comments(emailToSend)
-
+        const info = await mailer.comments(emailToSend);
+        
         if(info) {
+            // Insertar en base de datos.
             res.render('contact', { message: 'Gracias por enviar su consulta!' });
+        } else {
+            res.render('contact', { message: 'Error en las credenciales.' });
         }
 
     } catch (error) {
@@ -20,7 +23,7 @@ const sendComment = async(req, res, next) => {
     }
 }
 
-const getContact =async (req, res, next) => {
+const getContact = async (req, res, next) => {
     try {
         
         res.render('contact');
