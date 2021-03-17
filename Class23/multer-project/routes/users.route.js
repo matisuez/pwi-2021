@@ -4,7 +4,11 @@ const multer = require('multer');
 const config = { dest: './public/tmp' }; // Guardado temporal
 const upload = multer(config);
 
-const { getUsers, getFormUser, createFormUser } = require('../controllers/users.controller');
+const { 
+    getUsers,
+    getFormUser,
+    createFormUser 
+} = require('../controllers/users.controller');
 
 /* GET users listing. */
 router.get('/', getUsers);

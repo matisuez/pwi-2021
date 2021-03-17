@@ -1,0 +1,27 @@
+Heroku:
+- heroku -v
+- heroku login (abre una pestana en el navegador con el login de heroku)
+- heroku login -i (pide las credenciales para el logueo desde la terminal)
+- heroku create (crea una app dentro del servidor heroku)
+- heroku apps:rename --app nombre-app-viejo nombre-app-nuevo (Renombramos el nombre de la app)
+- git add .
+- git commit -m "First commit"
+- git push origin master
+- git push heroku master
+
+
+MySQL:
+- heroku addons:create cleardb:ignite (Crea la instancia de la DB en el servidor)
+- heroku config | grep CLEARDB_DATABASE_URL (Genera el connection string)
+- heroku config:set DATABASE_URL='mysql://b6117f600aa88d:05dca4e6@us-cdbr-east-03.cleardb.com/heroku_9a3effee7b33935?reconnect=true' (Cambiamos el nombre de la constante de la DB)
+- Cambiamos el db.js por el metodo createconnection y le pasamos como parametro el connection string
+- Commitiamos y pusheamos al servidor de heroku
+- Workbench
+
+Connection string:
+ mysql://b6117f600aa88d:05dca4e6@us-cdbr-east-03.cleardb.com/heroku_9a3effee7b33935?reconnect=true
+- b6117f600aa88d => Es el username de la DB
+- 05dca4e6 => Es la password de la DB
+- us-cdbr-east-03.cleardb.com => Es el host de la DB
+- heroku_9a3effee7b33935 => Es el nombre de la DB
+

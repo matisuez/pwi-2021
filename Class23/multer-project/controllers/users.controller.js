@@ -4,6 +4,7 @@ const imageHandler = require('../utils/imageHandler');
 
 const getUsers = async (req, res, next) => {
     try {
+        
         const users = await model.readUsers();
 
         if(users && users.length > 0) {
@@ -32,11 +33,10 @@ const createFormUser = async(req, res, next) => {
         const { email, password } = req.body;
         
         const image = imageHandler.saveImage(req.file); // mimetype y filename
-        const user = { email, password, image,  };
+        const user = { email, password, image };
         console.log(req.file.originalname);
         const result = await model.createUser(user);
         
-
         if(result.affectedRows > 0) {
             const users = await model.readUsers();
             res.render('users', { users });
